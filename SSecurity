@@ -1,0 +1,11 @@
+import hashlib
+import sys
+s=str(sys.argv[1])
+n=1000
+while n<10000:
+    i=str(n)
+    k=hashlib.md5(i.encode())
+    m=k.hexdigest()
+    if s==m:
+         print(n)
+    n=n+1
